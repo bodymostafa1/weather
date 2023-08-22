@@ -31,7 +31,7 @@ mycity = document.querySelector(".city-input").value
 getweather(mycity)
 })
 async function getweather(city){
- var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=45bd1a269106451e89c121232230408&q=${city}&days=3`)
+ var response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=45bd1a269106451e89c121232230408&q=${city}&days=3`)
  var weather = await response.json()
  console.log(weather)
  highdeg.innerText= weather.current.temp_c+" C"
